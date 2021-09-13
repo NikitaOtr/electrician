@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navigation */ \"./src/modules/navigation.js\");\n/* harmony import */ var _modules_togglePopup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/togglePopup */ \"./src/modules/togglePopup.js\");\n\n(0,_modules_navigation__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n(0,_modules_togglePopup__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://lastproject/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navigation */ \"./src/modules/navigation.js\");\n/* harmony import */ var _modules_togglePopup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/togglePopup */ \"./src/modules/togglePopup.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n\n(0,_modules_navigation__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n\n(0,_modules_togglePopup__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack://lastproject/./src/index.js?");
 
 /***/ }),
 
@@ -37,6 +37,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar togglePopup = function togglePopup() {\n  var buttonGetPopup = document.querySelector('.callback-bt');\n  var popup = document.getElementById('callback');\n  buttonGetPopup.addEventListener('click', function () {\n    popup.style.display = 'block';\n  });\n  popup.addEventListener('click', function (event) {\n    var target = event.target;\n\n    if (target.closest('.modal-close')) {\n      popup.style.display = 'none';\n    } else if (target.closest('.modal-callback')) {\n      return;\n    }\n\n    popup.style.display = 'none';\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (togglePopup);\n\n//# sourceURL=webpack://lastproject/./src/modules/togglePopup.js?");
+
+/***/ }),
+
+/***/ "./src/modules/topSlider.js":
+/*!**********************************!*\
+  !*** ./src/modules/topSlider.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar topSlider = function topSlider() {\n  var sliders = document.querySelectorAll('.item');\n  sliders.forEach(function (item) {\n    item.style.display = 'none';\n  });\n  sliders[0].style.display = 'block';\n  var currentSlider = 0;\n\n  var autoPlaySlide = function autoPlaySlide() {\n    sliders[currentSlider].style.display = 'none';\n    currentSlider = (currentSlider + 1) % sliders.length;\n    sliders[currentSlider].style.display = 'block';\n  };\n\n  setInterval(autoPlaySlide, 3000);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topSlider);\n\n//# sourceURL=webpack://lastproject/./src/modules/topSlider.js?");
 
 /***/ })
 
