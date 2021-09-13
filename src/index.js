@@ -1,4 +1,2 @@
-import t from './modules/t'
-
-console.log('index');
-t();
+import navigation from "./modules/navigation";
+navigation();
