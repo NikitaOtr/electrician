@@ -12,3 +12,6 @@ toggleServices();
 
 import scrollingUp from './modules/scrollingUp';
 scrollingUp();
+
+import setAccordeon from './modules/devAccordeon';
+setAccordeon();
