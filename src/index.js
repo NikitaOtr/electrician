@@ -13,5 +13,11 @@ toggleServices();
 import scrollingUp from './modules/scrollingUp';
 scrollingUp();
 
-import setAccordeon from './modules/devAccordeon';
+import setAccordeon from './modules/setAccordeon';
 setAccordeon();
+
+import banPrintForms from './modules/banPrintForms';
+banPrintForms();
+
+import sendForms from './modules/sendForms';
+sendForms();
