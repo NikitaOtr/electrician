@@ -9,3 +9,6 @@ topSlider();
 
 import toggleServices from './modules/toggleServices';
 toggleServices();
+
+import scrollingUp from './modules/scrollingUp';
+scrollingUp();

@@ -6,7 +6,7 @@ const toggleServices = () => {
     elements[1].style.display = 'block';
     elements[2].style.display = 'block';
 
-    console.log(elements);
+    // console.log(elements);
 
     let current = 0;
 
@@ -28,7 +28,7 @@ const toggleServices = () => {
         setNext(current);
     };
 
-    console.log(right);
+    // console.log(right);
     right.addEventListener('click', autoPlay);
     // setInterval(autoPlay, 1000);
 
