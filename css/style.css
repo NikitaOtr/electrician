@@ -1075,6 +1075,11 @@ video#video_background {
 	justify-content: center;
 }
 
+.services-carousel {
+	display: flex;
+	justify-content: center;
+}
+
 .arrow-right,
 .arrow-left {
 	width: 30px;

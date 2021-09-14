@@ -1,10 +1,19 @@
 const togglePopup = () => {
-    const buttonGetPopup = document.querySelector('.callback-bt');
+    const services = document.querySelector('.services-elements');
+    const buttonGetPopupHeader =  document.querySelector('.callback-bt');
+    const buttonGetPopupServices = document.querySelector('.button-services');
     const popup = document.getElementById('callback');
 
-    buttonGetPopup.addEventListener('click', () => {
-        popup.style.display = 'block';
+    services.addEventListener('click', event => {
+        if (event.target.closest('.fancyboxModal')) {
+            popup.style.display = 'block';
+        }
     });
+
+    [buttonGetPopupHeader, buttonGetPopupServices].forEach(item => {
+        item.addEventListener('click', () => popup.style.display = 'block');
+    });
+
 
     popup.addEventListener('click', event => {
         const target = event.target;

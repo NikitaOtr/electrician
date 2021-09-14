@@ -6,12 +6,12 @@ const topSlider = () => {
     sliders[0].style.display = 'block';
 
     let currentSlider = 0;
-    const autoPlaySlide = () => {
+    const autoPlaySlider = () => {
         sliders[currentSlider].style.display = 'none';
         currentSlider = (currentSlider + 1) % sliders.length;
         sliders[currentSlider].style.display = 'block';
     };
-    setInterval(autoPlaySlide, 3000);
+    setInterval(autoPlaySlider, 3000);
 };
 
 export default topSlider;
