@@ -31,6 +31,7 @@ const sendForms = () => {
                 setTimeout(() => {
                     statusMessage.textContent = '';
                 }, 5000);
+
                 if (response.status !== 200) {
                     throw new Error(response.statusText);
                 }
