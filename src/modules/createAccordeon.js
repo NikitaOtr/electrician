@@ -1,7 +1,9 @@
-const setAccordeon = () => {
+const createAccordeon = () => {
     const accordeon = document.querySelector('.accordeon');
     const elements = document.querySelectorAll('.accordeon .element');
     const elementsContent = document.querySelectorAll('.accordeon .element-content');
+
+    elements[0].classList.add('active');
     elementsContent[0].style.display = 'block';
 
     const toggleContent = content => {
@@ -32,4 +34,4 @@ const setAccordeon = () => {
     });
 };
 
-export default setAccordeon;
+export default createAccordeon;

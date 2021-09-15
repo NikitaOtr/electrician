@@ -9,15 +9,15 @@ const scrollingUp = () => {
         });
     });
 
-    const checkShow = () => {
+    const checkShowArrowUp = () => {
         if (document.documentElement.scrollTop > 2000) {
             arrowUp.style.display = 'block';
         } else {
             arrowUp.style.display = 'none';
         }
-        requestAnimationFrame(checkShow);
+        requestAnimationFrame(checkShowArrowUp);
     };
-    checkShow();
+    checkShowArrowUp();
 };
 
 export default scrollingUp;

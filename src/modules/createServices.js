@@ -1,4 +1,4 @@
-const toggleServices = () => {
+const createServices = () => {
     const elements = document.querySelectorAll('.services-element');
     const right = document.querySelector('.arrow-right');
     const left = document.querySelector('.arrow-left');
@@ -8,7 +8,7 @@ const toggleServices = () => {
     elements[1].style.display = 'block';
     elements[2].style.display = 'block';
 
-    let current = 0;
+    let currentElement = 0;
 
     const removePrev = index => {
         elements[index].style.display = 'none';
@@ -27,20 +27,17 @@ const toggleServices = () => {
         elements[(index + 2) % elements.length].style.order = 3;
     };
 
-    const playLeft = () => {
-        removePrev(current);
-        current = (current + 1) % elements.length;
-        setNext(current);
-    };
+    right.addEventListener('click', () => {
+        removePrev(currentElement);
+        currentElement = (currentElement + elements.length - 1) % elements.length;
+        setNext(currentElement);
+    });
 
-    const playRight = () => {
-        removePrev(current);
-        current = (current + elements.length - 1) % elements.length;
-        setNext(current);
-    };
-
-    right.addEventListener('click', playRight);
-    left.addEventListener('click', playLeft);
+    left.addEventListener('click', () => {
+        removePrev(currentElement);
+        currentElement = (currentElement + 1) % elements.length;
+        setNext(currentElement);
+    });
 };
 
-export default toggleServices;
+export default createServices;

@@ -1,4 +1,4 @@
-const navigation = () => {
+const smoothScrolling = () => {
     const anchorsMenu = document.querySelectorAll('.top-menu a');
     for (const anchor of anchorsMenu) {
         anchor.addEventListener("click", event => {
@@ -12,4 +12,4 @@ const navigation = () => {
     }
 };
 
-export default navigation;
+export default smoothScrolling;

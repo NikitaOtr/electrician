@@ -6,6 +6,7 @@ const topSlider = () => {
     sliders[0].style.display = 'block';
 
     let currentSlider = 0;
+
     const autoPlaySlider = () => {
         sliders[currentSlider].style.display = 'none';
         currentSlider = (currentSlider + 1) % sliders.length;

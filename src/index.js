@@ -4,17 +4,17 @@ smoothScrolling();
 import togglePopup from './modules/togglePopup';
 togglePopup();
 
-import topSlider from './modules/topSlider';
-topSlider();
+import createTopSlider from './modules/createTopSlider';
+createTopSlider();
 
-import toggleServices from './modules/toggleServices';
-toggleServices();
+import createServices from './modules/createServices';
+createServices();
 
 import scrollingUp from './modules/scrollingUp';
 scrollingUp();
 
-import setAccordeon from './modules/setAccordeon';
-setAccordeon();
+import createAccordeon from './modules/createAccordeon';
+createAccordeon();
 
 import banPrintForms from './modules/banPrintForms';
 banPrintForms();
