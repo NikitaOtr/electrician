@@ -21,3 +21,6 @@ banPrintForms();
 
 import sendForms from './modules/sendForms';
 sendForms();
+
+import createMobileMenu from './modules/createMobileMenu';
+createMobileMenu();

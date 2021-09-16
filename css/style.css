@@ -421,8 +421,13 @@ a.absolute {
 	-o-transition: all 200ms ease-out;
 	transition: all 200ms ease-out;
 }
+
+.push20 {
+	margin-top: 15px;
+}
+
 .mobile-menu.open {
-	right: 0;
+	right: 0 !important;
 }
 .overlay {
 	position: fixed;
@@ -446,6 +451,7 @@ a.absolute {
 	display: block;
 	text-decoration: none;
 	color: #fff;
+	text-align: center;
 	padding: 10px 20px;
 	text-transform: uppercase;
 	font-family: "Helios";

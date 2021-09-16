@@ -1,6 +1,6 @@
 const togglePopup = () => {
     const services = document.querySelector('.services-elements');
-    const buttonGetPopupHeader =  document.querySelector('.callback-bt');
+    const buttonsGetPopupHeader =  document.querySelectorAll('.callback-btn');
     const buttonGetPopupServices = document.querySelector('.button-services');
 
     const popup = document.getElementById('callback');
@@ -12,7 +12,7 @@ const togglePopup = () => {
         }
     });
 
-    [buttonGetPopupHeader, buttonGetPopupServices].forEach(item => {
+    [...buttonsGetPopupHeader, buttonGetPopupServices].forEach(item => {
         item.addEventListener('click', event => {
             event.preventDefault();
             popup.style.display = 'block';
