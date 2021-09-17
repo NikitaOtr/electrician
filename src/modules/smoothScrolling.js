@@ -1,6 +1,9 @@
 const smoothScrolling = () => {
     const anchorsMenu = document.querySelectorAll('.top-menu a');
-    for (const anchor of anchorsMenu) {
+    const anchorsMobileMenu = document.querySelectorAll('.mobile-menu li>a');
+    const anchors = [...anchorsMenu, ...anchorsMobileMenu];
+
+    for (const anchor of anchors) {
         anchor.addEventListener("click", event => {
             event.preventDefault();
             const goto = anchor.getAttribute('href');

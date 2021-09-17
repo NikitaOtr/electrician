@@ -27,13 +27,15 @@ const createServices = () => {
         elements[(index + 2) % elements.length].style.order = 3;
     };
 
-    right.addEventListener('click', () => {
+    right.addEventListener('click', event => {
+        event.preventDefault();
         removePrev(currentElement);
         currentElement = (currentElement + elements.length - 1) % elements.length;
         setNext(currentElement);
     });
 
-    left.addEventListener('click', () => {
+    left.addEventListener('click', event => {
+        event.preventDefault();
         removePrev(currentElement);
         currentElement = (currentElement + 1) % elements.length;
         setNext(currentElement);
