@@ -17,6 +17,8 @@ const togglePopup = () => {
         popup.removeEventListener('animationend', hidePopup);
         popup.classList.remove('fadeOutDown');
         popup.classList.add('fadeInDown');
+
+        console.log(popup, popupOverlay);
     };
 
     const animationClose = () => {
@@ -24,6 +26,9 @@ const togglePopup = () => {
         popup.classList.remove('fadeInDown');
         popup.classList.add('fadeOutDown');
         popupOverlay.style.display = 'none';
+
+        console.log(popup, popupOverlay);
+
     };
 
     services.addEventListener('click', event => {
